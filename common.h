@@ -1,5 +1,10 @@
 #ifndef _COMMON_H_
 #define _COMMON_H_
+#include <stdio.h>
+#include <stdint-gcc.h>
+
+#define M_COUNT 1 << 16
+uint16_t memory[M_COUNT];
 
 enum {
     R_R0 = 0,
@@ -14,6 +19,8 @@ enum {
     R_COND,
     R_COUNT
 };
+
+uint16_t reg[R_COUNT];
 
 enum {
     OP_BR = 0, /* branch */
